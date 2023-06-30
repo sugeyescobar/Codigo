@@ -210,8 +210,6 @@ BEGIN
 END;
 
 --------------------------------------------------------------------------------------------------------------------------------------
-
---------------se realiza la secuencia de 1 y 1
 create sequence s_id_marca
 start with 1
 increment by 1
@@ -257,42 +255,34 @@ BEGIN
     marca_producto := 'Marca desconocida';
   END IF;
 
-  -- se va a verificar si el tipo de producto ya existe en la tabla TipoProducto
   SELECT COUNT(*) INTO marca_exists FROM MarcaProducto WHERE Marca = marca_producto;
   IF marca_exists = 0 THEN
-    -- Insertar el nuevo registro solo si el tipo no existe
+
     INSERT INTO MarcaProducto (id, Marca) VALUES (s_id_marca.NEXTVAL, marca_producto);
   END IF;
 END;
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
 select a.nombre, a.precio, b.tipo, c.marca from puestostesoem a
 FULL JOIN tipoproducto b on a.num_tipo= b.id
 FULL JOIN marcaproducto c on a.num_mar= c.id ;
-
 
 select a.* from puestostesoem a
 INNER JOIN tipoproducto b on a.num_tipo= b.id 
 and a.num_mar=6;
 
-
 select * from puestostesoem a
 LEFT JOIN tipoproducto c on a.num_tipo= c.id ;
 
-
 select * from puestostesoem a
 RIGHT JOIN marcaproducto b on a.num_mar= b.id  and b.id is null;
-
 
 select * from puestostesoem a
 FULL JOIN tipoproducto b on a.num_tipo= b.id 
 FULL JOIN marcaproducto c on a.num_mar= c.id  
 where b.id is null or c.id is null ;
 
----------join de letras By P-------------
 select a.id, a.nombre, a.precio, b.tipo, c.marca from puestostesoem a
 JOIN tipoproducto b on a.num_tipo= b.id
 JOIN marcaproducto c on a.num_mar= c.id 
@@ -330,7 +320,6 @@ BEGIN
     END IF;
 END;
 
-------------------------------INSERTAR DATOS QUE COMINECEN CON 'T'--------------
 insert into PuestosTesoem values(86,'Tamal de verde de pollo', 15,10,5);
 insert into PuestosTesoem values(87,'Taco Tripa', 25,1,1);
 insert into PuestosTesoem values(88,'Torta estilo Rusa', 55,3,2);
