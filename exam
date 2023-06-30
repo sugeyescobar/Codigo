@@ -1,0 +1,386 @@
+create table PuestosTeso(
+id number(5),
+Nombre nvarchar2(80),
+Precio number(5),
+Tipo_n number(5),
+Marca_n number(5)
+);
+
+select*from PuestosTeso;
+
+drop table PuestosTeso;
+
+
+create table TipoProducto(
+id number(5),
+Tipo nvarchar2(30)
+);
+
+select * from TipoProducto;
+
+drop table TipoProducto;
+
+
+create table MarcaProducto(
+id number(5),
+Marca nvarchar2(30)
+);
+
+select * from MarcaProducto;
+
+drop table MarcaProducto;
+
+insert into PuestosTeso values(1,'Taco suadero', 22,1,1);
+insert into PuestosTeso values(2,'Taco bistec', 22,1,1);
+insert into PuestosTeso values(3,'Taco longaniza', 22,1,1);
+insert into PuestosTeso values(4,'Taco campechano', 22,1,1);
+insert into PuestosTeso values(5,'Taco pastor', 22,1,1);
+insert into PuestosTeso values(6,'Taco suadero', 22,1,1);
+insert into PuestosTeso values(7,'Taco chuleta', 22,1,1);
+insert into PuestosTeso values(8,'Taco de suadero con queso', 25,1,1);
+insert into PuestosTeso values(9,'Taco bistec con queso', 25,1,1);
+insert into PuestosTeso values(10,'Taco alambre', 25,1,1);
+insert into PuestosTeso values(11,'Torta suadero', 40,3,2);
+insert into PuestosTeso values(12,'Torta milanesa con queso', 50,3,2);
+insert into PuestosTeso values(13,'Torta milanesa sencilla', 40,3,2);
+insert into PuestosTeso values(14,'TESOTORTA', 40,3,2);
+insert into PuestosTeso values(15,'TORTAGUESS', 55,3,2);
+insert into PuestosTeso values(16,'Torta campechana', 40,3,2);
+insert into PuestosTeso values(17,'Torta pierna', 45,3,2);
+insert into PuestosTeso values(18,'Torta pollo', 40,3,2);
+insert into PuestosTeso values(19,'Torta chorizo', 40,3,2);
+insert into PuestosTeso values(20,'Gringa suadero', 30,2,1);
+insert into PuestosTeso values(21,'Gringa bistec', 30,2,1);
+insert into PuestosTeso values(22,'Gringa longaniza', 35,2,1);
+insert into PuestosTeso values(23,'Gringa imposible', 35,2,1);
+insert into PuestosTeso values(24,'Gringa pastor', 30,2,1);
+insert into PuestosTeso values(25,'Gringa suadero', 30,2,1);
+insert into PuestosTeso values(26,'Gringa campechano', 30,2,1);
+insert into PuestosTeso values(27,'Gringa alambre', 35,2,1);
+insert into PuestosTeso values(28,'Gordita de chicharron', 25,4,3);
+insert into PuestosTeso values(29,'Quesadilla de suadero', 25,5,3);
+insert into PuestosTeso values(30,'Quesadilla de queso', 20,5,3);
+insert into PuestosTeso values(31,'Quesadilla de pollo', 25,5,3);
+insert into PuestosTeso values(32,'Quesadilla de bistec', 25,5,3);
+insert into PuestosTeso values(33,'Huarache de suadero', 40,7,3);
+insert into PuestosTeso values(34,'Huarache de pollo', 40,7,3);
+insert into PuestosTeso values(35,'Enchiladas de pollo', 35,8,3);
+insert into PuestosTeso values(36,'Enchiladas con suadero', 35,8,3);
+insert into PuestosTeso values(37,'Rebanada de Pizza Hawaina', 20,9,4);
+insert into PuestosTeso values(38,'Pambazo de suadero', 30,6,3);
+insert into PuestosTeso values(39,'Pambazo de pollo', 30,6,3);
+insert into PuestosTeso values(40,'Rebanada de Pizza Hawaillana', 20,9,4);
+insert into PuestosTeso values(41,'Rebanada de Pizza Peperoni', 20,9,4);
+insert into PuestosTeso values(42,'Rebanada de Pizza Mexicana', 20,9,4);
+insert into PuestosTeso values(43,'Rebanada de Pizza Pastor', 20,9,4);
+insert into PuestosTeso values(44,'Tamal Verde', 15,10,5);
+insert into PuestosTeso values(45,'Tamal Rojo', 15,10,5);
+insert into PuestosTeso values(46,'Tamal de Rajas', 15,10,5);
+insert into PuestosTeso values(47,'Tamal de Dulce', 15,10,5);
+insert into PuestosTeso values(48,'Tamal de Zarzamora', 15,10,5);
+insert into PuestosTeso values(49,'Tamal Oaxaqueño Verde', 15,10,5);
+insert into PuestosTeso values(50,'Tamal Oaxaqueño Rojo', 15,10,5);
+insert into PuestosTeso values(51,'Torta de tamal Verde', 17,11,5);
+insert into PuestosTeso values(52,'Torta de tamal Roja', 17,11,5);
+insert into PuestosTeso values(53,'Torta de tamal de Dulce', 17,11,5);
+insert into PuestosTeso values(54,'Torta de tamal de Zarzamora', 17,11,5);
+insert into PuestosTeso values(55,'Torta de tamal de Rajas', 17,11,5);
+insert into PuestosTeso values(56,'Torta de tamal de Dulce', 17,11,5);
+insert into PuestosTeso values(57,'Agua limon con chia 500ml', 15,12,6);
+insert into PuestosTeso values(58,'Agua limon con chia 1L', 25,12,6);
+insert into PuestosTeso values(59,'Agua de Frutas 500ml', 15,12,6);
+insert into PuestosTeso values(60,'Agua de Frutas 1L', 25,12,6);
+insert into PuestosTeso values(61,'Agua de rompope 500ml', 15,12,6);
+insert into PuestosTeso values(62,'Agua de rompope 1L', 25,12,6);
+insert into PuestosTeso values(63,'Agua de Horchata 500ml', 15,12,6);
+insert into PuestosTeso values(64,'Agua de Horchata 1L', 25,12,6);
+insert into PuestosTeso values(65,'Tacos de canasta de Papa 3', 20,13,6);
+insert into PuestosTeso values(66,'Tacos de canasta de Frijol 3', 20,13,6);
+insert into PuestosTeso values(67,'Hot dogs 3', 25,14,5);
+insert into PuestosTeso values(68,'Congelada de Rompope', 15,15,7);
+insert into PuestosTeso values(69,'Congelada de Limon', 15,15,7);
+insert into PuestosTeso values(70,'Congelada de Galleta Oreo', 15,15,7);
+insert into PuestosTeso values(71,'Congelada de Limon', 15,15,7);
+insert into PuestosTeso values(72,'Chamoyada de limon', 10,16,7);
+insert into PuestosTeso values(73,'Chamoyada de Tamarindo', 10,16,7);
+insert into PuestosTeso values(74,'Chamoyada de Mango', 10,16,7);
+insert into PuestosTeso values(75,'Congelada de Rompope', 15,16,7);
+insert into PuestosTeso values(76,'Paleta de hielo de grosella', 15,17,7);
+insert into PuestosTeso values(77,'Paleta de hielo de limon', 15,17,7);
+insert into PuestosTeso values(78,'Paleta de hielo de mango', 12,17,7);
+insert into PuestosTeso values(79,'Paleta de hielo de leche', 15,17,7);
+insert into PuestosTeso values(80,'Refresco', 20,18,8);
+insert into PuestosTeso values(81,'Papas', 20,19,9);
+insert into PuestosTeso values(82,'Galletas', 5,20,10);
+insert into PuestosTeso values(83,'Chocolate', 5,21,11);
+insert into PuestosTeso values(84,'gelatinas', 15,22,12);
+insert into PuestosTeso values(85,'Paletas', 3,22,12);
+
+
+select* from tipoproducto;
+
+insert into TipoProducto values(23,'Ponche');
+insert into TipoProducto values(24,'Cerveza');
+insert into TipoProducto values(25,'Pulque');
+insert into TipoProducto values(26,'Carnitas');
+insert into TipoProducto values(27,'Barbacoa');
+
+select* from MarcaProducto;
+
+insert into MarcaProducto values(13,'Arizona');
+insert into MarcaProducto values(14,'Corona');
+insert into MarcaProducto values(15,'Pulques de don juan');
+insert into MarcaProducto values(16,'Carnitas los pepes');
+insert into MarcaProducto values(17,'Barbacoa el plebe');
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+create sequence s_ids
+start with 1
+increment by 1
+maxvalue 100
+minvalue 0;
+
+drop sequence s_ids;
+
+
+----------------------------------------------------------------------------------------------------------
+CREATE OR REPLACE TRIGGER trg_TipoProducto
+before INSERT ON PuestosTeso
+FOR EACH ROW
+DECLARE
+  tipo_producto NVARCHAR2(30);
+  tipo_exists NUMBER;
+BEGIN
+  IF :NEW.Num_tipo = 1 THEN
+    tipo_producto := 'Taco';
+  ELSIF :NEW.Num_tipo = 2 THEN
+    tipo_producto := 'Gringa';
+  ELSIF :NEW.Num_tipo = 3 THEN
+    tipo_producto := 'Torta';
+  ELSIF :NEW.Num_tipo = 4 THEN
+    tipo_producto := 'Gordita';
+  ELSIF :NEW.Num_tipo = 5 THEN
+    tipo_producto := 'Quesadilla';
+  ELSIF :NEW.Num_tipo = 6 THEN
+    tipo_producto := 'Pambazo';
+  ELSIF :NEW.Num_tipo = 7 THEN
+    tipo_producto := 'Huarache';
+  ELSIF :NEW.Num_tipo = 8 THEN
+    tipo_producto := 'Enchilada';
+  ELSIF :NEW.Num_tipo = 9 THEN
+    tipo_producto := 'Rebanada de Pizza';
+  ELSIF :NEW.Num_tipo = 10 THEN
+    tipo_producto := 'Tamal';
+  ELSIF :NEW.Num_tipo = 11 THEN
+    tipo_producto := 'Guajolota';
+  ELSIF :NEW.Num_tipo = 12 THEN
+    tipo_producto := 'Agua Fresca';
+  ELSIF :NEW.Num_tipo = 13 THEN
+    tipo_producto := 'Taco de Canasta';
+  ELSIF :NEW.Num_tipo = 14 THEN
+    tipo_producto := 'Hot dog';
+  ELSIF :NEW.Num_tipo = 15 THEN
+    tipo_producto := 'Congelada';
+  ELSIF :NEW.Num_tipo = 16 THEN
+    tipo_producto := 'Chamoyada';
+  ELSIF :NEW.Num_tipo = 17 THEN
+    tipo_producto := 'Paleta de Hielo';
+  ELSIF :NEW.Num_tipo = 18 THEN
+    tipo_producto := 'Refresco';
+  ELSIF :NEW.Num_tipo = 19 THEN
+    tipo_producto := 'Papas';
+  ELSIF :NEW.Num_tipo = 20 THEN
+    tipo_producto := 'Galletas';
+  ELSIF :NEW.Num_tipo = 21 THEN
+    tipo_producto := 'Chocolate';
+  ELSIF :NEW.Num_tipo = 22 THEN
+    tipo_producto := 'Paleta';
+  ELSE
+    tipo_producto := 'Tipo desconocido';
+  END IF;
+
+
+  SELECT COUNT(*) INTO tipo_exists FROM TipoProducto WHERE Tipo = tipo_producto;
+  IF tipo_exists = 0 THEN
+
+    INSERT INTO TipoProducto (id, Tipo) VALUES (s_ids.NEXTVAL, tipo_producto);
+  END IF;
+END;
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+--------------se realiza la secuencia de 1 y 1
+create sequence s_id_marca
+start with 1
+increment by 1
+maxvalue 100
+minvalue 0;
+
+drop sequence s_id_marca;
+
+
+-------------------------------------------------------------------------------------------------------------------- 
+CREATE OR REPLACE TRIGGER trg_MarcaProducto
+before INSERT ON PuestosTeso
+FOR EACH ROW
+DECLARE
+  marca_producto NVARCHAR2(30);
+  marca_exists NUMBER;
+BEGIN
+  IF :NEW.Num_mar = 1 THEN
+    marca_producto := 'Tacos Pepe';
+  ELSIF :NEW.Num_mar = 2 THEN
+    marca_producto := 'Tortas El Tio';
+  ELSIF :NEW.Num_mar = 3 THEN
+    marca_producto := 'Garnachas';
+  ELSIF :NEW.Num_mar = 4 THEN
+    marca_producto := 'Pizzas Teso';
+  ELSIF :NEW.Num_mar = 5 THEN
+    marca_producto := 'Tamales El Bochito';
+  ELSIF :NEW.Num_mar = 6 THEN
+    marca_producto := 'Taquitos Canasta';
+  ELSIF :NEW.Num_mar = 7 THEN
+    marca_producto := 'Los Helados Teso';
+  ELSIF :NEW.Num_mar = 8 THEN
+    marca_producto := 'Coca-Cola';
+  ELSIF :NEW.Num_mar = 9 THEN
+    marca_producto := 'Doritos';
+  ELSIF :NEW.Num_mar = 10 THEN
+    marca_producto := 'Emperador';
+  ELSIF :NEW.Num_mar = 11 THEN
+    marca_producto := 'Bocadin';
+  ELSIF :NEW.Num_mar = 12 THEN
+    marca_producto := 'Bimbo';
+  ELSE
+    marca_producto := 'Marca desconocida';
+  END IF;
+
+  -- se va a verificar si el tipo de producto ya existe en la tabla TipoProducto
+  SELECT COUNT(*) INTO marca_exists FROM MarcaProducto WHERE Marca = marca_producto;
+  IF marca_exists = 0 THEN
+    -- Insertar el nuevo registro solo si el tipo no existe
+    INSERT INTO MarcaProducto (id, Marca) VALUES (s_id_marca.NEXTVAL, marca_producto);
+  END IF;
+END;
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+select a.nombre, a.precio, b.tipo, c.marca from puestostesoem a
+FULL JOIN tipoproducto b on a.num_tipo= b.id
+FULL JOIN marcaproducto c on a.num_mar= c.id ;
+
+
+select a.* from puestostesoem a
+INNER JOIN tipoproducto b on a.num_tipo= b.id 
+and a.num_mar=6;
+
+
+select * from puestostesoem a
+LEFT JOIN tipoproducto c on a.num_tipo= c.id ;
+
+
+select * from puestostesoem a
+RIGHT JOIN marcaproducto b on a.num_mar= b.id  and b.id is null;
+
+
+select * from puestostesoem a
+FULL JOIN tipoproducto b on a.num_tipo= b.id 
+FULL JOIN marcaproducto c on a.num_mar= c.id  
+where b.id is null or c.id is null ;
+
+---------join de letras By P-------------
+select a.id, a.nombre, a.precio, b.tipo, c.marca from puestostesoem a
+JOIN tipoproducto b on a.num_tipo= b.id
+JOIN marcaproducto c on a.num_mar= c.id 
+WHERE a.nombre LIKE 'B%' OR a.nombre LIKE 'P%';
+
+
+
+----------------------------------------------------------------------------------------------------------
+
+CREATE TABLE DescriProducto(
+descripcion nvarchar2(100)
+);
+
+SELECT * FROM DescriP;
+
+drop table DescriPr;
+
+CREATE OR REPLACE TRIGGER tr_Prod_T
+AFTER INSERT ON PuestosTeso
+FOR EACH ROW
+BEGIN
+        IF SUBSTR(:NEW.nombre, 1, 1) = 'T' THEN
+        INSERT INTO DescriP (descripcion)
+        VALUES ('Se agregó un producto con la vitamina T:' ||:NEW.Nombre);
+    END IF;
+END;
+
+CREATE OR REPLACE TRIGGER tr_Prod_T
+AFTER INSERT ON PuestosTeso
+FOR EACH ROW
+BEGIN
+        IF :NEW.nombre LIKE 'T%' THEN
+        INSERT INTO DescriP (descripcion)
+        VALUES ('Se inserto un producto con la vitamina T: ' ||:NEW.Nombre);
+    END IF;
+END;
+
+------------------------------INSERTAR DATOS QUE COMINECEN CON 'T'--------------
+insert into PuestosTesoem values(86,'Tamal de verde de pollo', 15,10,5);
+insert into PuestosTesoem values(87,'Taco Tripa', 25,1,1);
+insert into PuestosTesoem values(88,'Torta estilo Rusa', 55,3,2);
+insert into PuestosTesoem values(89,'Taco la especialidad', 20,13,6);
+
+
+drop trigger tr_Prod_T;
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+create table Peliculas(
+id number(5),
+nombre nvarchar2(30),
+Num_Genero number(5)
+);
+drop table Peliculas;
+
+SELECT * FROM Peliculas;
+insert into Peliculas values (01,'a sirenita', 1);
+insert into Peliculas values (02,'El Conjuro', 2);
+insert into Peliculas values (03,'Soy leyenda',3);
+insert into Peliculas values (04,'El conjuro 2', 2;
+insert into Peliculas values (05,'Heroe en el cenbtro comercial', 4);
+insert into Peliculas values (06,'El libro de la serlva', 1);
+insert into Peliculas values (07,'Big mama',4);
+insert into Peliculas values (08,'Lo imposible',5);
+insert into Peliculas values (09,'Escuadron 6', 6);
+
+create table CategoriaPelis(
+id number(5),
+Genero nvarchar2(20));
+
+insert into CategoriaPelis values (1,'Infantil');
+insert into CategoriaPelis values (2,'Terror');
+insert into CategoriaPelis values (3,'Suspenso');
+insert into CategoriaPelis values (4,'Comedia');
+insert into CategoriaPelis values (5,'Drama');
+insert into CategoriaPelis values (6,'Accion');
+
+CREATE VIEW VistaPelis AS
+SELECT e.id, e.Nombre, a.genero 
+FROM Peliculas e
+JOIN CategoriaPelis a ON  e.Num_genero=a.id;
+
+SELECT *
+FROM VistaPelis;
+
+drop view VistaCategoria;
+
+CREATE VIEW VistaCategoria AS
+SELECT id, genero
+FROM CategoriaPelis
+         
